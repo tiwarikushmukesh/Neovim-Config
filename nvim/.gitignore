@@ -1,0 +1,18 @@
+# Neovim Swap and Backup Files
+*.swp
+*.swo
+*.bak
+*.un~
+
+# Plugin folders and lock files
+plugged/
+packer_compiled.lua
+lazy-lock.json
+
+# Cache and logs
+*.log
+parser/
+
+# OS Specific
+.DS_Store
+
