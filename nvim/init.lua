@@ -20,15 +20,11 @@ vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = t
 -- Keymaps
 require("keymaps")
 
-
 -- Treesitter for syntax highlighting
-require("nvim-treesitter.configs").setup {
-  ensure_installed = { "javascript", "lua", "python", "html", "css" },
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-}
+require("nvim-treesitter.configs").setup({
+  ensure_installed = { "javascript", "lua", "python", "css", "html" }, -- add more if needed
+  highlight = { enable = true },
+})
 
 -- Autopair
 require("nvim-autopairs").setup()
@@ -36,4 +32,17 @@ require("nvim-autopairs").setup()
 vim.o.cursorline = true
 vim.o.number = true
 vim.o.relativenumber = true
+
+--Theme Setup
+vim.o.termguicolors = true
+vim.o.background = "dark"
+
+-- Optional: setup vscode.nvim if needed
+require("vscode").setup({
+  -- Enable transparent background
+  transparent = false,
+  italic_comments = true,
+})
+
+vim.cmd("colorscheme vscode")
 
