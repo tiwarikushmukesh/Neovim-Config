@@ -50,5 +50,17 @@ require("packer").startup(function(use)
 })
   
   use "windwp/nvim-autopairs"
+
+  use({
+  "akinsho/toggleterm.nvim",
+  tag = '*',
+  config = function()
+    require("toggleterm").setup {
+      start_in_insert = true,
+      direction = "horizontal",  -- or "vertical" or "float"
+    }
+  end
+})
+
 end)
 

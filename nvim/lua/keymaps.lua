@@ -14,3 +14,6 @@ inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 ]]
 
+--Terminal
+vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", { noremap = true, silent = true })
+
