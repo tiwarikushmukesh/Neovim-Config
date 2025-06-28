@@ -27,3 +27,5 @@ require("nvim-treesitter.configs").setup {
   },
 }
 
+-- Autopair
+require("nvim-autopairs").setup()

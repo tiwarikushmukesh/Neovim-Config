@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/kushtiwari/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
     url = "https://github.com/nvimtools/none-ls.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/kushtiwari/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/kushtiwari/.local/share/nvim/site/pack/packer/start/nvim-cmp",

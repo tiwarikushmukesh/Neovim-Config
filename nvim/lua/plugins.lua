@@ -48,6 +48,7 @@ require("packer").startup(function(use)
   "nvimtools/none-ls.nvim",
   requires = { "nvim-lua/plenary.nvim" },
 })
-
+  
+  use "windwp/nvim-autopairs"
 end)
 
