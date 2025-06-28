@@ -1,6 +1,9 @@
 -- Plugins
 require("plugins")
 
+-- Git signs
+require("gitsigns-config")
+
 -- LSP Config
 require("lsp")
 
@@ -29,3 +32,8 @@ require("nvim-treesitter.configs").setup {
 
 -- Autopair
 require("nvim-autopairs").setup()
+
+vim.o.cursorline = true
+vim.o.number = true
+vim.o.relativenumber = true
+
