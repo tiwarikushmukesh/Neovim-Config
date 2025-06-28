@@ -17,3 +17,12 @@ inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 --Terminal
 vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", { noremap = true, silent = true })
 
+vim.keymap.set("i", "<C-e>", function()
+	vim.schedule(function()
+		vim.diagnostic.open_float(nil, { focus = false })
+	end)
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Show diagnostic under cursor in insert mode with Ctrl+E"
+})

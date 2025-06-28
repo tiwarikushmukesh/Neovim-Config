@@ -1,3 +1,6 @@
+-- Settings
+require("settings")
+
 -- Plugins
 require("plugins")
 
@@ -22,8 +25,8 @@ require("keymaps")
 
 -- Treesitter for syntax highlighting
 require("nvim-treesitter.configs").setup({
-  ensure_installed = { "javascript", "lua", "python", "css", "html" }, -- add more if needed
-  highlight = { enable = true },
+	ensure_installed = { "javascript", "lua", "python", "css", "html" }, -- add more if needed
+	highlight = { enable = true },
 })
 
 -- Autopair
@@ -39,10 +42,9 @@ vim.o.background = "dark"
 
 -- Optional: setup vscode.nvim if needed
 require("vscode").setup({
-  -- Enable transparent background
-  transparent = false,
-  italic_comments = true,
+	-- Enable transparent background
+	transparent = false,
+	italic_comments = true,
 })
 
 vim.cmd("colorscheme vscode")
-

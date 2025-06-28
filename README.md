@@ -1,71 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
-<body>
-  <h1>🔥 Neovim Config (Cross-Platform)</h1>
-  <p>This is my personal Neovim setup optimized for full stack development using JavaScript, Python, HTML, and CSS.</p>
+# ⚡ My Neovim Setup
 
-  <h2>📦 Features</h2>
-  <ul>
-    <li>LSP support (with <code>mason.nvim</code> and <code>lspconfig</code>)</li>
-    <li>Autocompletion with <code>nvim-cmp</code></li>
-    <li>Snippets support via <code>LuaSnip</code></li>
-    <li>Syntax highlighting via <code>treesitter</code></li>
-    <li>File explorer using <code>nvim-tree</code></li>
-    <li>Git integration with <code>vim-fugitive</code></li>
-    <li>Code formatting using <code>none-ls</code> (e.g. Prettier, Black)</li>
-  </ul>
+A clean, fast, VSCode-inspired Neovim configuration with LSP, autocompletion, git integration, and beautiful visuals — built for productivity.
 
-  <h2>🛠️ Plugins Used</h2>
-  <ul>
-    <li><code>neovim/nvim-lspconfig</code></li>
-    <li><code>hrsh7th/nvim-cmp</code></li>
-    <li><code>hrsh7th/cmp-nvim-lsp</code></li>
-    <li><code>L3MON4D3/LuaSnip</code></li>
-    <li><code>saadparwaiz1/cmp_luasnip</code></li>
-    <li><code>williamboman/mason.nvim</code></li>
-    <li><code>williamboman/mason-lspconfig.nvim</code></li>
-    <li><code>nvim-lua/plenary.nvim</code></li>
-    <li><code>nvim-treesitter/nvim-treesitter</code></li>
-    <li><code>nvim-tree/nvim-tree.lua</code></li>
-    <li><code>nvim-tree/nvim-web-devicons</code></li>
-    <li><code>tpope/vim-fugitive</code></li>
-    <li><code>nvimtools/none-ls.nvim</code></li>
-  </ul>
+---
 
-  <h2>🚀 Setup Instructions</h2>
-  <pre><code>git clone https://github.com/tiwarikushmukesh/Neovim-Config.git
-cd Neovim-Config
-sh setup.sh   # Make sure this script links config to ~/.config/nvim
-</code></pre>
+## 📦 Features
 
-  <h2>💻 Compatible With</h2>
-  <ul>
-    <li>Termux (Android)</li>
-    <li>macOS</li>
-    <li>Linux</li>
-  </ul>
+- ⚙️ **LSP support** via `mason.nvim` and `lspconfig`
+- 🚨 **Diagnostics** with custom signs, virtual text, and floating popup (deduplicated)
+- 🧠 **Autocompletion** using `nvim-cmp`, `LuaSnip`, and `nvim-autopairs`
+- 💡 **Snippets** powered by `LuaSnip`
+- 🌈 **Treesitter** syntax highlighting and parsing
+- 🗂️ **File Explorer** using `nvim-tree.lua` with Devicons
+- 🖌️ **Autoformatting** using `none-ls.nvim` (Prettier, Black, etc.)
+- 🧾 **Git integration** via `gitsigns.nvim` and `vim-fugitive`
+- ✨ **VSCode-like theme** and visual appearance
+- 🪄 **Cursorline highlighting**, smooth scrolling, and modern UI
+- ⌨️ **Insert-mode diagnostics** on `<C-e>` (Ctrl + e)
+- 🔁 **Terminal integration** like VSCode
 
-  <h2>📁 Directory Structure</h2>
-  <pre><code>Neovim-Config/
-├── init.lua
-├── lua/
-│   ├── plugins.lua
-│   ├── lsp.lua
-│   ├── cmp-config.lua
-│   ├── keymaps.lua
-│   ├── formatters.lua
-│   └── explorer.lua
-├── setup.sh
-└── .gitignore
-</code></pre>
+---
 
-  <h2>📄 License</h2>
-  <p>This project is licensed under the <strong>MIT License</strong>.</p>
+## ⌨️ Custom Shortcuts
 
-  <p>Made with ❤️ by <strong>Kush Mukesh Tiwari</strong></p>
-</body>
-</html>
+| Shortcut     | Action                        |
+| ------------ | ----------------------------- |
+| `<C-e>`      | Show diagnostic (insert mode) |
+| `<leader>e`  | Show diagnostic (normal mode) |
+| `<leader>xx` | Toggle `trouble.nvim` panel   |
+| `K`          | Hover documentation           |
+
+---
+
+## 🧰 Tools Used
+
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
+
+---
+
+## 🖼️ Screenshots
+
+> _Coming soon — add your screenshot or screen recording here_
+
+---
+
+## 🧪 Diagnostics Sample
+
+![Diagnostics](assets/diagnostic-preview.png)  
+<sub>Insert mode with `<C-e>` popup and deduplicated float</sub>
+
+---
+
+## 🧠 Why this setup?
+
+- No unnecessary plugins
+- Lightweight and fast
+- Easy to maintain
+- Keyboard-driven workflow (no mouse required)
+- Looks and feels like VSCode, but with Neovim power
+
+---
+
+## 📄 License
+
+MIT — [kushtiwari.dev](mailto:kushtiwari.dev@gmail.com)
