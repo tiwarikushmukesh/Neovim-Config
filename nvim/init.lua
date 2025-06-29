@@ -23,6 +23,10 @@ vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = t
 -- Keymaps
 require("keymaps")
 
+require("telescope-setup")
+
+require("noice-setup")
+
 -- Treesitter for syntax highlighting
 require("nvim-treesitter.configs").setup({
 	ensure_installed = { "javascript", "lua", "python", "css", "html" }, -- add more if needed
@@ -48,3 +52,5 @@ require("vscode").setup({
 })
 
 vim.cmd("colorscheme vscode")
+
+vim.notify = require("notify")
