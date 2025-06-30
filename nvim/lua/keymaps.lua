@@ -51,3 +51,10 @@ vim.api.nvim_set_keymap("n", "<C-t>", ":ToggleTerm<CR>", opts)
 -- 🧭 CMP popup navigation
 keymap("i", "<Down>", "<C-n>", opts)
 keymap("i", "<Up>", "<C-p>", opts)
+
+vim.keymap.set("n", "<leader>nd", function()
+	local ok, noice = pcall(require, "noice")
+	if ok and noice then
+		noice.cmd("dismiss")
+	end
+end, { desc = "Dismiss Noice messages", noremap = true, silent = true })

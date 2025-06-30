@@ -53,4 +53,10 @@ require("vscode").setup({
 
 vim.cmd("colorscheme vscode")
 
+-- Notification
 vim.notify = require("notify")
+require("notify").setup({
+	stages = "fade", -- optional: slide/fade
+	timeout = 3000, -- message disappears after 3 seconds
+	background_colour = "#000000"
+})
