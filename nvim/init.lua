@@ -21,7 +21,7 @@ require("explorer")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 -- Keymaps
-require("keymaps")
+require("keymaps-config")
 
 require("telescope-setup")
 
