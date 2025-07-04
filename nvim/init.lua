@@ -27,10 +27,51 @@ require("telescope-setup")
 
 require("noice-setup")
 
+require("config.autocmds")
+require("config.commands")
+require("config.options")
+require("config.statusline")
+
 -- Treesitter for syntax highlighting
-require("nvim-treesitter.configs").setup({
-	ensure_installed = { "javascript", "lua", "python", "css", "html" }, -- add more if needed
-	highlight = { enable = true },
+require('nvim-treesitter.configs').setup({
+  ensure_installed = {
+    "lua", "javascript", "typescript", "html", "css", "json",
+    "bash", "python", "markdown", "tsx", "vim", "gitignore"
+  },
+  sync_install = false,
+  auto_install = true,
+
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+
+  indent = {
+    enable = true,
+  },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<C-space>",
+      node_incremental = "<C-space>",
+      scope_incremental = "<C-s>",
+      node_decremental = "<C-backspace>",
+    },
+  },
+
+  textobjects = {
+    select = {
+      enable = true,
+      lookahead = true,
+      keymaps = {
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
+    },
+  },
 })
 
 -- Autopair
@@ -46,9 +87,9 @@ vim.o.background = "dark"
 
 -- Optional: setup vscode.nvim if needed
 require("vscode").setup({
-	-- Enable transparent background
-	transparent = false,
-	italic_comments = true,
+  -- Enable transparent background
+  transparent = false,
+  italic_comments = true,
 })
 
 vim.cmd("colorscheme vscode")
@@ -56,7 +97,7 @@ vim.cmd("colorscheme vscode")
 -- Notification
 vim.notify = require("notify")
 require("notify").setup({
-	stages = "fade", -- optional: slide/fade
-	timeout = 3000, -- message disappears after 3 seconds
-	background_colour = "#000000"
+  stages = "fade", -- optional: slide/fade
+  timeout = 3000,  -- message disappears after 3 seconds
+  background_colour = "#000000"
 })
